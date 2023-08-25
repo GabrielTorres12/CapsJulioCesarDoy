@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAPS Julio Cesar Doy</title>
+  <link rel="stylesheet" media="all" href="php/sstyle.css" />
+</head>
+<body>
+<div id="container">
+  <h1>&bull;Modificar Paciente &bull;</h1>
+  <div>
+  </div>
+  <div>
+  </div>
+  <form action="php/ModificarPac.php" method="POST">
+    <div class="datos">
+      <input type="text" placeholder="Ficha" name="Ficha" required>
+    </div>
+    <div class="datos">
+      <input type="text" placeholder="Nombre y Apellido" name="Apellido_Nombre"required>
+    </div>
+        <div class="datos">
+      <input type="text" placeholder="DNI" name="DNI" id="name_input" required>
+    </div>
+    <div class="datos">
+      <input type="text" placeholder="Diagnostico" name="Diagnostico" required>
+    </div>
+       <div>
+        <input class="botones" type="submit" value="Modificar" name="btnModificarPac">
+    </div>
+    <a href="javascript: history.go(-1)">VOLVER PARA ATRAS</a>
+  </form>
+</div>
+</body>
+</html>

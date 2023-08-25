@@ -1,0 +1,57 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: #212121;
+	color:white;
+}
+
+a{
+	color:white;
+}
+
+
+div#menu {
+
+	width: 200px;
+	margin-top: -5px;
+	float: left; /* elemento flote a la izquierda de los demas*/
+	position: absolute;  /*elemento es posicionado en el documento*/
+}
+
+div#menu ul{
+	list-style: none;
+	position: fixed;
+}
+
+div#menu ul li {
+	margin-top: 15px;   /* margen superior de un elemento*/
+	font-family: arial;  /* familia de fuente o letras*/
+	font-size: 18px;      /* tamaño de la letra*/
+	background: #696969 ;      /* fondo de color azul*/
+	width: 150px;          /*  ancho*/
+	padding-top: 10px;      /*especifica la anchura del area */
+	padding-bottom: 10px;    /*establece el espacio de relleno requerido en la parte INFERIOR del elemento*/
+    border-radius: 0px 20px 20px 0px;  /*definir qué tan redondeadas serán las esquinas.*/
+    padding-left: 20px;                 /*establece el espacio  IZQUIERDO del elemento*/
+    box-shadow: 10px 1px 20px #000000 ;   /*efectos de sombra. Permite proyectar una sombra*/
+    -webkit-transition : padding-left 0.6s; /*forma de animar los cambios de las propiedades IZQUIERDA*/
+
+
+}
+div#menu ul li:hover {
+	padding-left:  60px;
+
+	background-color: #2F4F4F ; /* Color de fondo p.opcion sobre del boton */
+    cursor: pointer;          /* cambiar el aspecto del puntero a manito */
+	    
+}
+.titulo{
+	font-family: forte;
+	box-shadow: 10px 10px 10px #939393;
+	
+	text-align: center;   /* texto alineado al centro*/
+	font-size: 40px;
+}
