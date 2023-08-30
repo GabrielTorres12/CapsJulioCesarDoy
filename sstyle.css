@@ -1,0 +1,337 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(IMG/imagen.jpg) 50%/cover #777;;
+  font-family: "Quicksand", sans-serif;
+  
+}
+
+aside.context {
+  text-align: center;
+  color: #333;
+  line-height: 1.7;
+}
+aside.context a {
+  text-decoration: none;
+  color: #333;
+  padding: 3px 0;
+  border-bottom: 1px dashed;
+}
+aside.context .explanation {
+  max-width: 700px;
+  margin: 4em auto 0;
+}
+
+footer {
+  text-align: center;
+  margin: 3em auto;
+  width: 100%;
+}
+footer a {
+  text-decoration: none;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px dashed #333;
+  color: #333;
+  margin: 5px;
+}
+footer a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+footer a .icons {
+  margin-top: 12px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+h1 {
+  width: 100%;
+  margin: 3em auto 1.5em;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+h1 small {
+  text-transform: none;
+  display: block;
+  margin: 20px 0;
+  font: 300 20px "QuickSand", sans-serif;
+  color: #999;
+}
+
+h4 {
+  width: 100%;
+  margin: 2em auto 0;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+
+}
+h4 small {
+  text-transform: uppercase;
+  display: block;
+  margin: 10px 0;
+  font: 300 15px "QuickSand", sans-serif;
+  color: #999;
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3em auto 0;
+  max-width: 980px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.palette__wrapper {
+  flex: 1;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.palette {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  display: inline-block;
+  perspective: 1100px;
+}
+.palette__cover {
+  border-radius: 20px;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  transition: 0.3s ease;
+  transform-origin: top left;
+  font: 900 28px/0.9 "Poppins", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  overflow: hidden;
+}
+.palette__cover__border {
+  width: 80%;
+  height: 80%;
+  border: 7px solid #fff;
+  margin: 10%;
+}
+.palette__cover span {
+  display: inline-block;
+  position: absolute;
+  bottom: 7.5px;
+  left: 10px;
+  padding: 10px;
+  max-width: 50%;
+}
+.palette__cover__top {
+  position: absolute;
+  left: 0;
+  width: calc(100% + 64px);
+  margin-left: -32px;
+  z-index: 4;
+  border-radius: 3px 3px 4px 4px;
+  opacity: 0;
+}
+.palette__base {
+  background: #222;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  border-radius: 8px;
+  padding: 15px;
+  grid-gap: 8px;
+}
+.palette:hover .palette__cover {
+  transform: rotateX(78deg);
+}
+.palette:hover .palette__cover__top {
+  animation: startTransition 0.17s forwards 0.1s;
+}
+
+@keyframes startTransition {
+  0% {
+    opacity: 0;
+    top: 100px;
+    transform: scale(0.5);
+    height: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    top: 22px;
+    opacity: 1;
+    transform: scale(1);
+    height: 15px;
+    box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.2);
+  }
+}
+.palette__shade {
+  border-radius: 4px;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.9);
+}
+
+.palette--one .palette__base {
+  display: grid;
+  background:url(IMG/cajaa.ico);
+}
+
+.palette--one .palette__shade:nth-child(1) {
+  background: #00FFFF;
+}
+
+.palette--one .palette__cover {
+  background: #00FFFF;
+}
+.palette--one .palette__cover__top {
+  background: #00FFFF;
+}
+.palette--one .palette__cover span {
+  max-width: 50%;
+  background: #00FFFF;
+}
+
+.palette--two .palette__base {
+  display: grid;
+  grid-gap: 12px;
+  background:url(IMG/empleadoo.ico);
+}
+.palette--two .palette__cover {
+  background: #FF00FF;
+}
+.palette--two .palette__cover__top {
+  background: #FF00FF;
+}
+.palette--two .palette__cover span {
+  max-width: 62%;
+  background: #FF00FF;
+}
+.palette--two .palette__shade:nth-child(1) {
+  background: #FF00FF;
+}
+.palette--two .palette__shade:nth-child(2) {
+  background: #FF00FF;
+}
+.palette--two .palette__shade:nth-child(3) {
+  background: #FF00FF;
+}
+.palette--two .palette__shade:nth-child(4) {
+  background: #FF00FF;
+}
+
+.palette--three .palette__cover {
+  background: #0000FF;
+}
+.palette--three .palette__cover__top {
+  background: #0000FF;
+}
+.palette--three .palette__cover span {
+  max-width: 48%;
+  background: #0000FF;
+}
+.palette--three .palette__base {
+  display: grid;
+   background:url(IMG/invess.ico)
+}
+.palette--three .palette__shade:nth-child(1) {
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 2;
+  background: #0000FF;
+}
+.palette--three .palette__shade:nth-child(2) {
+  grid-row: 3 / span 2;
+  background: #0000FF;
+}
+.palette--three .palette__shade:nth-child(3) {
+  grid-row: 1 / span 2;
+  grid-column: 3 / span 2;
+  background: #0000FF;
+}
+.palette--three .palette__shade:nth-child(4) {
+  grid-row: 3 / span 2;
+  grid-column-start: 4;
+  background: #0000FF;
+}
+.palette--three .palette__shade:nth-child(6) {
+  background: #0000FF;
+}
+.palette--three .palette__shade:nth-child(5) {
+  background: #0000FF;
+}
+.palette--three .palette__shade:nth-child(8) {
+  background: #0000FF;
+}
+.palette--three .palette__shade:nth-child(7) {
+  background: #0000FF;
+}
+
+.palette--four .palette__base {
+  display: grid;
+    background:url(IMG/tornilloo.ico);
+}
+.palette--four .palette__shade:nth-child(1) {
+  grid-row: 1/ span 2;
+  background: #000000;
+}
+.palette--four .palette__shade:nth-child(2) {
+  grid-row: 3 / span 1;
+  background: #000000;
+}
+.palette--four .palette__shade:nth-child(3) {
+  background: #000000;
+}
+.palette--four .palette__shade:nth-child(4) {
+  background: #000000;
+}
+.palette--four .palette__shade:nth-child(5) {
+  background: #000000;
+}
+.palette--four .palette__cover {
+  background: #000000;
+}
+.palette--four .palette__cover__top {
+  background: #000000;
+}
+.palette--four .palette__cover span {
+  max-width: 59%;
+  background: #000000;
+}
+
+.palette--five .palette__base {
+  display: grid;
+  background:url(IMG/micro.ico)
+}
+.palette--five .palette__cover {
+  background: #00FF00;
+}
+.palette--five .palette__cover__top {
+  background: #00FF00;
+}
+.palette--five .palette__cover span {
+  max-width: 62%;
+  background: #00FF00;
+}
+.palette--five .palette__shade:nth-child(1) {
+  background: #00FF00;
+}
+.palette--five .palette__shade:nth-child(2) {
+  background: #00FF00;
+}
+.palette--five .palette__shade:nth-child(3) {
+  background: #00FF00;
+}
+.palette--five .palette__shade:nth-child(4) {
+  background: #00FF00;
+}
